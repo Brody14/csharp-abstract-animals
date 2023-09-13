@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace csharp_abstract_animals
 {
-    public class Sparrow : Animal
+    public class Sparrow : Animal, IFly
     {
         public Sparrow(string name) : base(name) { }
         public override void Call()
@@ -17,6 +17,11 @@ namespace csharp_abstract_animals
         public override void WhatYouEat()
         {
             Console.WriteLine("Mangia: semi e frutta!");
+        }
+
+        public void Fly()
+        {
+            Console.WriteLine("Sto volando!");
         }
     }
 }
